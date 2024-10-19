@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
-
+import { ContextProvider } from "./Context";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./index.css";
 import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
+import Layout from "./layout/Layout.jsx";
 
 const router = createBrowserRouter([
 	{
 		path: "/portfolio-mm-24/",
-		element: <App />,
+		element: <Layout />,
 		children: [
 			{
 				path: "/portfolio-mm-24/home",
@@ -26,6 +26,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<ContextProvider>
+			{" "}
+			<RouterProvider router={router} />
+		</ContextProvider>
 	</React.StrictMode>
 );
