@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Page not found</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var l = window.location;
+			var root = "/portfolio-mm-24";
+			if (l.pathname === root + "/" || l.pathname === root) {
+				window.location.replace(root + "/index.html");
+			} else {
+				var newUrl = root + "/?/" + l.pathname.slice(root.length);
+				window.location.replace(newUrl);
+			}
+		</script>
+	</body>
+</html>
