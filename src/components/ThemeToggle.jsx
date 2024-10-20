@@ -13,9 +13,5 @@ export default function ThemeToggle() {
 		}
 	};
 
-	return (
-		<button onClick={handleThemeToggle}>
-			{darkMode ? "Light Mode" : "Dark Mode"}
-		</button>
-	);
+	return <button onClick={handleThemeToggle}></button>;
 }
