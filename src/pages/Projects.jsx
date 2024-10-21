@@ -1,15 +1,15 @@
 export default function Home() {
 	const images = [
-		"./public/assets/images/port-img-1-sm.jpg",
-		"./public/assets/images/port-img-2-sm.jpg",
-		"./public/assets/images/port-img-10-sm.jpg",
-		"./public/assets/images/port-img-6-sm.jpg",
-		"./public/assets/images/port-img-5-sm.jpg",
-		"./public/assets/images/port-img-4-sm.jpg",
-		"./public/assets/images/port-img-7-sm.jpg",
-		"./public/assets/images/port-img-8-sm.jpg",
-		"./public/assets/images/port-img-9-sm.jpg",
-		"./public/assets/images/port-img-3-sm.jpg",
+		"./assets/images/port-img-1-sm.jpg",
+		"./assets/images/port-img-2-sm.jpg",
+		"./assets/images/port-img-10-sm.jpg",
+		"./assets/images/port-img-6-sm.jpg",
+		"./assets/images/port-img-5-sm.jpg",
+		"./assets/images/port-img-4-sm.jpg",
+		"./assets/images/port-img-7-sm.jpg",
+		"./assets/images/port-img-8-sm.jpg",
+		"./assets/images/port-img-9-sm.jpg",
+		"./assets/images/port-img-3-sm.jpg",
 	];
 	return (
 		<>
@@ -25,11 +25,4 @@ export default function Home() {
 			</div>
 		</>
 	);
-}
-{
-	/* // <div className="w-full sm:max-w-screen-sm lg:max-w-full min-h-screen bg-pink-500 text-white dark:bg-green-500 dark:text-black">
-		// 	<h1 className="font-redhat text-4xl sm:text-2xl md:text-5xl lg:text-5xl xl:text-7xl md:text-nowrap">
-		// 		Welcome to the Projects Page
-		// 	</h1>
-		// </div> */
 }
