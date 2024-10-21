@@ -6,6 +6,7 @@ import "./index.css";
 import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
 import Layout from "./layout/Layout.jsx";
+import Landing from "./pages/Landing.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -13,11 +14,15 @@ const router = createBrowserRouter([
 		element: <Layout />,
 		children: [
 			{
-				path: "/portfolio-mm-24/home",
+				path: "",
+				element: <Landing />,
+			},
+			{
+				path: "home",
 				element: <Home />,
 			},
 			{
-				path: "/portfolio-mm-24/contact",
+				path: "contact",
 				element: <Contact />,
 			},
 		],

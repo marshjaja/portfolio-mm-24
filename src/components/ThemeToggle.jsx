@@ -2,16 +2,17 @@ import { useContext } from "react";
 import { Context } from "../Context";
 
 export default function ThemeToggle() {
-	const { darkMode, setDarkMode } = useContext(Context);
+	const { darkMode, handleThemeToggle } = useContext(Context);
 
-	const handleThemeToggle = () => {
-		setDarkMode(!darkMode);
-		if (!darkMode) {
-			document.documentElement.classList.add("dark");
-		} else {
-			document.documentElement.classList.remove("dark");
-		}
-	};
-
-	return <button onClick={handleThemeToggle}></button>;
+	return (
+		<div className="hidden lg:flex flex-col items-center justify-between p-4 fixed bottom-6 right-10">
+			<button
+				aria-describedby="dark-mode-tooltip"
+				onClick={handleThemeToggle}
+				className="w-16 p-2 rounded-full text-primary-pink hover:text-opacity-60"
+			>
+				{darkMode ? "Dark" : "Light"}
+			</button>
+		</div>
+	);
 }

@@ -14,8 +14,8 @@ export default function NavBar() {
 
 	const linkClass = ({ isActive }) =>
 		isActive
-			? "text-white dark:text-black bg-primaryTeal dark:bg-darkAccentPink rounded-xl px-3 py-2"
-			: "text-black dark:text-white hover:opacity-70 rounded-xl px-3 py-2";
+			? " font-redhat text-white dark:text-black bg-primaryTeal dark:bg-darkAccentPink rounded-xl px-3 py-2"
+			: "font-redhat text-black dark:text-white hover:opacity-70 rounded-xl px-3 py-2";
 
 	return (
 		<>
@@ -24,42 +24,41 @@ export default function NavBar() {
 					{/* Desktop Sidebar Navigation */}
 					<nav className="hidden lg:flex flex-col items-center justify-between fixed left-0 top-0 h-full text-black dark:text-white">
 						<div className="flex flex-col items-center space-y-20 ">
-							{/* Logo */}
 							<NavLink
 								to="/portfolio-mm-24/home"
-								className="text-3xl p-4 pt-10 mb-2"
+								className="text-3xl p-4 pt-10 mb-2 "
 							>
 								{darkMode ? "DARK LOGO" : "LIGHT LOGO"}
 							</NavLink>
+							<div className="flex flex-col items-center space-y-20  font-redhat">
+								<NavLink
+									to="/portfolio-mm-24/home"
+									className={`transform -rotate-90 tracking-wider  hover:rotate-0 transition duration-400 ease-in-out`}
+								>
+									Home
+								</NavLink>
 
-							{/* Navigation Links */}
-							<NavLink
-								to="/portfolio-mm-24/home"
-								className={`transform -rotate-90 tracking-wider mb-8 hover:rotate-0 transition duration-400 ease-in-out`}
-							>
-								Home
-							</NavLink>
+								<NavLink
+									to="/portfolio-mm-24/contact"
+									className={`transform -rotate-90 tracking-wider  hover:rotate-0 transition duration-400 ease-in-out`}
+								>
+									Contact
+								</NavLink>
+								<NavLink
+									to="/portfolio-mm-24/home"
+									className={`transform -rotate-90 tracking-wider  hover:rotate-0 transition duration-400 ease-in-out`}
+								>
+									Home
+								</NavLink>
 
-							<NavLink
-								to="/portfolio-mm-24/contact"
-								className={`transform -rotate-90 tracking-wider mb-8 hover:rotate-0 transition duration-400 ease-in-out`}
-							>
-								Contact
-							</NavLink>
-							<NavLink
-								to="/portfolio-mm-24/home"
-								className={`transform -rotate-90 tracking-wider mb-8 hover:rotate-0 transition duration-400 ease-in-out`}
-							>
-								Home
-							</NavLink>
-
-							<NavLink
-								to="/portfolio-mm-24/contact"
-								className={`transform -rotate-90 tracking-wider mb-8 hover:rotate-0 transition duration-400 ease-in-out
+								<NavLink
+									to="/portfolio-mm-24/contact"
+									className={`transform -rotate-90 tracking-wider  hover:rotate-0 transition duration-400 ease-in-out
 `}
-							>
-								Contact
-							</NavLink>
+								>
+									Contact
+								</NavLink>
+							</div>
 						</div>
 
 						<div className="hidden lg:flex flex-col items-center justify-between p-4 fixed bottom-6 right-10">
@@ -76,6 +75,8 @@ export default function NavBar() {
 							<PiLinkedinLogo className=" tracking-wider space-y-2 text-2xl hover:scale-125 transition duration-400 ease-in-out" />
 							<HiOutlineEnvelope className=" tracking-wider space-y-2 text-2xl hover:scale-125 transition duration-400 ease-in-out" />
 							<PiGithubLogo className=" tracking-wider space-y-2 text-2xl hover:scale-125 transition duration-400 ease-in-out" />
+
+							{/* Thicker social icon option */}
 
 							{/* <FaGithub className=" tracking-wider space-y-2 text-2xl" />
 							<FaLinkedin className=" tracking-wider space-y-2 text-2xl" />
