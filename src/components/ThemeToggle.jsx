@@ -11,7 +11,7 @@ export default function ThemeToggle() {
 				onClick={handleThemeToggle}
 				className="w-16 p-2 rounded-full text-primary-pink hover:text-opacity-60"
 			>
-				{darkMode ? "Dark" : "Light"}
+				{darkMode ? "Light" : "Dark"}
 			</button>
 		</div>
 	);

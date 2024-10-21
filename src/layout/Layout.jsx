@@ -15,7 +15,7 @@ export default function Layout() {
 			<div className="bg-white dark:bg-darkBackground">
 				<ThemeToggle />
 				{!isLandingPage && <Navbar />}
-				<main className="mx-auto w-full max-w-screen-sm min-h-screen flex flex-col rounded-xl pt-20 pb-[100px]">
+				<main className="mx-auto w-full sm:max-w-screen-sm lg:max-w-2xl xl:max-w-5xl min-h-screen flex flex-col rounded-xl pt-20 pb-[100px]">
 					<Outlet />
 				</main>
 			</div>
