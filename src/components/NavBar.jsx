@@ -21,7 +21,7 @@ export default function NavBar() {
 		<>
 			<div className="max-w-[1200px] mx-auto">
 				<header className="pb-2 pt-[max(env(safe-area-inset-top),1rem)] text-end">
-					{/* Mobile/Tablet Logo and Dark Mode Toggle */}
+					{/* Mobile/Tablet Logo and Dark Mode Toggle  top nav */}
 					<div className="lg:hidden flex justify-between items-center p-4 text-black dark:text-white">
 						<NavLink to="/portfolio-mm-24/home" className="text-2xl">
 							{darkMode ? "DARK LOGO" : "LIGHT LOGO"}
@@ -54,7 +54,7 @@ export default function NavBar() {
 								</NavLink>
 
 								<NavLink
-									to="#"
+									to="/portfolio-mm-24/projects"
 									className={`transform -rotate-90 tracking-wider hover:rotate-0 transition duration-400 ease-in-out`}
 								>
 									Projects
@@ -94,12 +94,12 @@ export default function NavBar() {
 					</nav>
 
 					{/* Mobile/Tablet Navigation at the bottom */}
-					<nav className="lg:hidden fixed bottom-0 left-0 right-0 p-4 shadow-lg">
+					<nav className="lg:hidden fixed bottom-0 left-0 right-0 p-4 shadow-lg bg-white dark:bg-darkBackground text-black dark:text-white">
 						<div className="flex justify-around items-center">
 							<NavLink to="/portfolio-mm-24/home" className={linkClass}>
 								Home
 							</NavLink>
-							<NavLink to="#">Projects</NavLink>
+							<NavLink to="/portfolio-mm-24/projects">Projects</NavLink>
 							<NavLink to="#">About</NavLink>
 
 							<NavLink to="/portfolio-mm-24/contact" className={linkClass}>
